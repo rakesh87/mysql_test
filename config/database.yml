@@ -49,6 +49,4 @@ test:
 #
 production:
   <<: *default
-  database: mysql_test_production
-  username: mysql_test
-  password: <%= ENV['MYSQL_TEST_DATABASE_PASSWORD'] %>
+  database: ENV['DATABASE_URL']
